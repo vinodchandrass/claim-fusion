@@ -1,0 +1,93 @@
+{
+  "inputs": {
+    "train": {
+      "path": "D:\\DataLineage\\S67_HealthVer_Acquisition\\HealthVer_official\\data\\healthver_train.csv",
+      "exists": true,
+      "sha256": "414b62c2382ae299c057f4c02fc0b528787303e48f7f33c65e4d6a19331ad359",
+      "expected_sha256": "414b62c2382ae299c057f4c02fc0b528787303e48f7f33c65e4d6a19331ad359",
+      "snapshot_hash_match": true
+    },
+    "dev": {
+      "path": "D:\\DataLineage\\S67_HealthVer_Acquisition\\HealthVer_official\\data\\healthver_dev.csv",
+      "exists": true,
+      "sha256": "a2120d746171320b54f80dc344b8c707378dd79354b16f97b17048845ccc5239",
+      "expected_sha256": "a2120d746171320b54f80dc344b8c707378dd79354b16f97b17048845ccc5239",
+      "snapshot_hash_match": true
+    }
+  },
+  "splits": {
+    "train": {
+      "rows": 10590,
+      "columns": [
+        "id",
+        "evidence",
+        "claim",
+        "label",
+        "topic_ip",
+        "question"
+      ],
+      "missing_by_column": {
+        "id": 0,
+        "evidence": 0,
+        "claim": 0,
+        "label": 0,
+        "topic_ip": 0,
+        "question": 0
+      },
+      "unique_by_column": {
+        "id": 10590,
+        "evidence": 722,
+        "claim": 1395,
+        "label": 3,
+        "topic_ip": 80,
+        "question": 80
+      },
+      "label_distributions": {
+        "label": {
+          "Neutral": 4397,
+          "Supports": 3782,
+          "Refutes": 2411
+        }
+      }
+    },
+    "dev": {
+      "rows": 1917,
+      "columns": [
+        "id",
+        "evidence",
+        "claim",
+        "label",
+        "topic_ip",
+        "question"
+      ],
+      "missing_by_column": {
+        "id": 0,
+        "evidence": 0,
+        "claim": 0,
+        "label": 0,
+        "topic_ip": 0,
+        "question": 0
+      },
+      "unique_by_column": {
+        "id": 1917,
+        "evidence": 475,
+        "claim": 230,
+        "label": 3,
+        "topic_ip": 58,
+        "question": 58
+      },
+      "label_distributions": {
+        "label": {
+          "Neutral": 993,
+          "Supports": 533,
+          "Refutes": 391
+        }
+      }
+    }
+  },
+  "detected_columns": {
+    "claim": "claim",
+    "evidence": "evidence",
+    "label": "label"
+  }
+}

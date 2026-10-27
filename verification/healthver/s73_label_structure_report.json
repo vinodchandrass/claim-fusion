@@ -1,0 +1,15 @@
+{
+  "phase": "S73",
+  "pair_label_conflict_count": 0,
+  "claim_label_diversity": {
+    "train": {
+      "claims_with_multiple_pair_labels": 757,
+      "claims_total": 1389
+    },
+    "dev": {
+      "claims_with_multiple_pair_labels": 115,
+      "claims_total": 230
+    }
+  },
+  "note": "Different labels for the same claim with different evidence are expected and must not be collapsed to claim-level verdicts."
+}

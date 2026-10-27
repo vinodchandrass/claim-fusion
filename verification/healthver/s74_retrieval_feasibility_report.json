@@ -1,0 +1,16 @@
+{
+  "phase": "S74",
+  "candidate_pool": "unique training evidence strings only",
+  "pool_diagnostics": {
+    "train_dev_unique_claims_exact": 1,
+    "train_dev_unique_evidence_exact": 465,
+    "dev_unique_claims_with_any_paired_evidence_in_train_pool": 230,
+    "dev_unique_claims_total": 230,
+    "dev_unique_evidence_in_train_pool": 465,
+    "dev_unique_evidence_total": 474,
+    "train_pool_evidence_unique": 717,
+    "train_pool_source_document_ids_verified": false,
+    "train_pool_is_independent_nonoracle_document_corpus": false
+  },
+  "note": "Pool membership is an upper-bound availability diagnostic, not a retrieval evaluation. No BM25, NLI, test labels or dev accuracy evaluated."
+}

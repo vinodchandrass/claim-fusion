@@ -1,0 +1,30 @@
+{
+  "phase": "S72",
+  "inputs": {
+    "train": {
+      "path": "D:\\DataLineage\\S67_HealthVer_Acquisition\\HealthVer_official\\data\\healthver_train.csv",
+      "sha256": "414b62c2382ae299c057f4c02fc0b528787303e48f7f33c65e4d6a19331ad359",
+      "rows": 10590,
+      "unique_claims": 1389,
+      "unique_evidence": 717,
+      "labels": {
+        "refutes": 2411,
+        "neutral": 4397,
+        "supports": 3782
+      }
+    },
+    "dev": {
+      "path": "D:\\DataLineage\\S67_HealthVer_Acquisition\\HealthVer_official\\data\\healthver_dev.csv",
+      "sha256": "a2120d746171320b54f80dc344b8c707378dd79354b16f97b17048845ccc5239",
+      "rows": 1917,
+      "unique_claims": 230,
+      "unique_evidence": 474,
+      "labels": {
+        "neutral": 993,
+        "refutes": 391,
+        "supports": 533
+      }
+    }
+  },
+  "test_read": false
+}
