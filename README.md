@@ -8,9 +8,9 @@ This repository is intended to document and, once verified, distribute research 
 
 ## Current status
 
-**Repository initialization only.** The original experimental scripts, predictions, aggregate tables, manifests, and checksums have not yet been deposited here. No reproduction claim or third-party data redistribution is made by this initial commit.
+**Artifact publication and static reproducibility audit complete; independent reproduction not yet established.** Verified original experimental scripts, selected aggregate results, manifests, and checksum records are deposited. Datasets, model checkpoints and individual predictions are not redistributed. See [reproducibility readiness audit](docs/reproducibility_readiness_audit.md) and [published-byte verification](verification/published_byte_comparison_2026-10-27.md).
 
-## Planned structure
+## Repository structure
 
 - `scripts/`: verified evaluation and evidence-aggregation implementations
 - `configs/`: evaluation settings and frozen experiment configurations
@@ -18,7 +18,7 @@ This repository is intended to document and, once verified, distribute research 
 - `verification/`: hashes, source manifests and reconciliation records
 - `docs/`: protocols, dataset access guidance and reproduction instructions
 
-Directories will be introduced when their actual contents have been checked.
+The directories contain only the selected, verified artifacts; they are not a complete runnable distribution.
 
 ## Data and materials policy
 
