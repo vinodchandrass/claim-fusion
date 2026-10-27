@@ -1,0 +1,200 @@
+{
+  "status": "DEVELOPMENT_ONLY_CROSSFITTED_NOT_INDEPENDENT_VALIDATION",
+  "data_sha256": {
+    "candidates": "b6724c628aebf5b112fe3c8ca74fb59eddfad1b0e1f899eaf9b300190a8dc41d",
+    "cache": "1c504188ef1f4d95eae55175d6c9168294aad8c2d7e7089e466a3a39050f76f6",
+    "gold": "4b51aaeaf6aeb98ef27871e71b9682baef773b4ca55eae0f710160d51184a945"
+  },
+  "n_claims": 188,
+  "class_counts": {
+    "SUPPORTS": 124,
+    "REFUTES": 64
+  },
+  "n_sentences": 4500,
+  "test_accessed": false,
+  "design": {
+    "folds": 5,
+    "seed": 20261021,
+    "selection": "accuracy on other folds; tie favors simplest",
+    "claim_disjoint": true,
+    "frozen_retrieval": true,
+    "no_inference": true,
+    "no_new_training": true
+  },
+  "metrics": {
+    "frozen_top": {
+      "n": 188,
+      "coverage": 1.0,
+      "accuracy_covered": 0.6648936170212766,
+      "accuracy_all_with_abstain_as_error": 0.6648936170212766,
+      "macro_f1_covered": 0.6646564172258558,
+      "errors": 63,
+      "abstentions": 0
+    },
+    "adapted_fixed": {
+      "top": {
+        "n": 188,
+        "coverage": 1.0,
+        "accuracy_covered": 0.7925531914893617,
+        "accuracy_all_with_abstain_as_error": 0.7925531914893617,
+        "macro_f1_covered": 0.7643883158199172,
+        "errors": 39,
+        "abstentions": 0
+      },
+      "mean": {
+        "n": 188,
+        "coverage": 1.0,
+        "accuracy_covered": 0.7393617021276596,
+        "accuracy_all_with_abstain_as_error": 0.7393617021276596,
+        "macro_f1_covered": 0.7149664284167209,
+        "errors": 49,
+        "abstentions": 0
+      },
+      "rank": {
+        "n": 188,
+        "coverage": 1.0,
+        "accuracy_covered": 0.7393617021276596,
+        "accuracy_all_with_abstain_as_error": 0.7393617021276596,
+        "macro_f1_covered": 0.7149664284167209,
+        "errors": 49,
+        "abstentions": 0
+      },
+      "majority": {
+        "n": 188,
+        "coverage": 1.0,
+        "accuracy_covered": 0.6914893617021277,
+        "accuracy_all_with_abstain_as_error": 0.6914893617021277,
+        "macro_f1_covered": 0.6538412698412699,
+        "errors": 58,
+        "abstentions": 0
+      }
+    },
+    "adapted_crossfitted_selection": {
+      "n": 188,
+      "coverage": 1.0,
+      "accuracy_covered": 0.7712765957446809,
+      "accuracy_all_with_abstain_as_error": 0.7712765957446809,
+      "macro_f1_covered": 0.7423426294820716,
+      "errors": 43,
+      "abstentions": 0
+    },
+    "fixed_abstention_diagnostics": {
+      "0.1": {
+        "n": 188,
+        "coverage": 0.6914893617021277,
+        "accuracy_covered": 0.8384615384615385,
+        "accuracy_all_with_abstain_as_error": 0.5797872340425532,
+        "macro_f1_covered": 0.8224852071005917,
+        "errors": 21,
+        "abstentions": 58
+      },
+      "0.2": {
+        "n": 188,
+        "coverage": 0.6276595744680851,
+        "accuracy_covered": 0.8559322033898306,
+        "accuracy_all_with_abstain_as_error": 0.5372340425531915,
+        "macro_f1_covered": 0.8382649359026042,
+        "errors": 17,
+        "abstentions": 70
+      },
+      "0.4": {
+        "n": 188,
+        "coverage": 0.2978723404255319,
+        "accuracy_covered": 0.8571428571428571,
+        "accuracy_all_with_abstain_as_error": 0.2553191489361702,
+        "macro_f1_covered": 0.8541666666666666,
+        "errors": 8,
+        "abstentions": 132
+      },
+      "0.6": {
+        "n": 188,
+        "coverage": 0.2074468085106383,
+        "accuracy_covered": 0.8717948717948718,
+        "accuracy_all_with_abstain_as_error": 0.18085106382978725,
+        "macro_f1_covered": 0.8661633493479753,
+        "errors": 5,
+        "abstentions": 149
+      }
+    }
+  },
+  "paired_bootstrap": {
+    "crossfitted_minus_adapted_top": {
+      "delta": -0.02127659574468085,
+      "ci95": [
+        -0.0425531914893617,
+        -0.005319148936170213
+      ]
+    },
+    "adapted_top_minus_frozen_top": {
+      "delta": 0.1276595744680851,
+      "ci95": [
+        0.047872340425531915,
+        0.20212765957446807
+      ]
+    }
+  },
+  "fold_selection": [
+    {
+      "fold": 0,
+      "training_claims": 150,
+      "held_out_claims": 38,
+      "selected": {
+        "kind": "top",
+        "threshold": 0,
+        "weight": 0
+      },
+      "training_accuracy": 0.7866666666666666
+    },
+    {
+      "fold": 1,
+      "training_claims": 150,
+      "held_out_claims": 38,
+      "selected": {
+        "kind": "relevance",
+        "threshold": 0,
+        "weight": 4
+      },
+      "training_accuracy": 0.8
+    },
+    {
+      "fold": 2,
+      "training_claims": 150,
+      "held_out_claims": 38,
+      "selected": {
+        "kind": "relevance",
+        "threshold": 0,
+        "weight": 4
+      },
+      "training_accuracy": 0.82
+    },
+    {
+      "fold": 3,
+      "training_claims": 150,
+      "held_out_claims": 38,
+      "selected": {
+        "kind": "top",
+        "threshold": 0,
+        "weight": 0
+      },
+      "training_accuracy": 0.8066666666666666
+    },
+    {
+      "fold": 4,
+      "training_claims": 152,
+      "held_out_claims": 36,
+      "selected": {
+        "kind": "relevance",
+        "threshold": 0,
+        "weight": 2
+      },
+      "training_accuracy": 0.7894736842105263
+    }
+  ],
+  "limitations": [
+    "SciFact development-only: nested claim-disjoint selection is not an independent test",
+    "Cached model weights not cryptographically bound by this script; verify checkpoint provenance separately",
+    "Claims may share retrieved documents; claim-level bootstrap does not account for document-level dependence",
+    "Exploratory candidate policy family; repeated development can bias results",
+    "Abstention thresholds are descriptive only; not validated for deployment"
+  ]
+}

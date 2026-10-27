@@ -1,0 +1,140 @@
+{
+  "phase": "S68-S71",
+  "utc": "2026-10-20T07:10:43.048445+00:00",
+  "status": "SCHEMA_AND_DEVELOPMENT_OVERLAP_AUDIT_ONLY",
+  "source_directory": "D:\\DataLineage\\S67_HealthVer_Acquisition\\HealthVer_official\\data",
+  "heldout_test_files_read": false,
+  "model_inference_performed": false,
+  "independent_validation_authorized": false,
+  "inputs": {
+    "train": {
+      "path": "D:\\DataLineage\\S67_HealthVer_Acquisition\\HealthVer_official\\data\\healthver_train.csv",
+      "exists": true,
+      "sha256": "414b62c2382ae299c057f4c02fc0b528787303e48f7f33c65e4d6a19331ad359",
+      "expected_sha256": "414b62c2382ae299c057f4c02fc0b528787303e48f7f33c65e4d6a19331ad359",
+      "snapshot_hash_match": true
+    },
+    "dev": {
+      "path": "D:\\DataLineage\\S67_HealthVer_Acquisition\\HealthVer_official\\data\\healthver_dev.csv",
+      "exists": true,
+      "sha256": "a2120d746171320b54f80dc344b8c707378dd79354b16f97b17048845ccc5239",
+      "expected_sha256": "a2120d746171320b54f80dc344b8c707378dd79354b16f97b17048845ccc5239",
+      "snapshot_hash_match": true
+    }
+  },
+  "splits": {
+    "train": {
+      "rows": 10590,
+      "columns": [
+        "id",
+        "evidence",
+        "claim",
+        "label",
+        "topic_ip",
+        "question"
+      ],
+      "missing_by_column": {
+        "id": 0,
+        "evidence": 0,
+        "claim": 0,
+        "label": 0,
+        "topic_ip": 0,
+        "question": 0
+      },
+      "unique_by_column": {
+        "id": 10590,
+        "evidence": 722,
+        "claim": 1395,
+        "label": 3,
+        "topic_ip": 80,
+        "question": 80
+      },
+      "label_distributions": {
+        "label": {
+          "Neutral": 4397,
+          "Supports": 3782,
+          "Refutes": 2411
+        }
+      }
+    },
+    "dev": {
+      "rows": 1917,
+      "columns": [
+        "id",
+        "evidence",
+        "claim",
+        "label",
+        "topic_ip",
+        "question"
+      ],
+      "missing_by_column": {
+        "id": 0,
+        "evidence": 0,
+        "claim": 0,
+        "label": 0,
+        "topic_ip": 0,
+        "question": 0
+      },
+      "unique_by_column": {
+        "id": 1917,
+        "evidence": 475,
+        "claim": 230,
+        "label": 3,
+        "topic_ip": 58,
+        "question": 58
+      },
+      "label_distributions": {
+        "label": {
+          "Neutral": 993,
+          "Supports": 533,
+          "Refutes": 391
+        }
+      }
+    }
+  },
+  "overlap": {
+    "train_dev_exact_claim_overlap_unique": 1,
+    "train_unique_claims": 1389,
+    "dev_unique_claims": 230,
+    "train_dev_exact_evidence_overlap_unique": 465,
+    "train_unique_evidence": 717,
+    "dev_unique_evidence": 474,
+    "healthver_dev_scifact_dev_exact_unique": 0,
+    "healthver_train_scifact_dev_exact_unique": 0,
+    "healthver_dev_scifact_train_exact_unique": 0,
+    "healthver_train_scifact_train_exact_unique": 0,
+    "near_overlap_candidates_jaccard_ge_0_8": 0
+  },
+  "limitations": [
+    "Jaccard candidate screen is NOT a semantic overlap clearance; human assessment remains required",
+    "HEALTHVER test split intentionally not opened",
+    "Public benchmark may have pretraining exposure; contamination not cleared",
+    "Evidence-pair labels cannot automatically be interpreted as claim-level labels",
+    "No signed independent evaluator or investigator authorization",
+    "No new independent performance estimates produced"
+  ],
+  "detected_columns": {
+    "claim": "claim",
+    "evidence": "evidence",
+    "label": "label"
+  },
+  "retrieval_feasibility": {
+    "paired_evidence_present": true,
+    "independent_document_corpus_verified": false,
+    "reason": "Pair-level evidence text alone does not establish a non-oracle source-document collection with complete coverage and identifiers"
+  },
+  "scifact_reference": {
+    "dev": {
+      "status": "READ_DEV_OR_TRAIN_ONLY",
+      "path": "D:\\DataLineage\\ScientificClaim_Benchmark_SciFact\\data\\data\\claims_dev.jsonl",
+      "count": 300,
+      "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+    },
+    "train": {
+      "status": "READ_DEV_OR_TRAIN_ONLY",
+      "path": "D:\\DataLineage\\ScientificClaim_Benchmark_SciFact\\data\\data\\claims_train.jsonl",
+      "count": 809,
+      "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "phase": "S75",
+  "status": "DEVELOPMENT_ONLY_EXTERNAL_VALIDATION_BLOCKED",
+  "evidence_pair_classification_feasible_in_principle": true,
+  "claim_level_three_class_policy_frozen": false,
+  "nonoracle_source_document_retrieval_verified": false,
+  "external_evaluator_approved": false,
+  "prior_exposure_and_pretraining_contamination_cleared": false,
+  "independent_holdout_authorized": false,
+  "test_read": false,
+  "model_inference": false,
+  "next_scientific_requirement": "Independent source-document collection or explicitly preregistered pair-level transfer task, plus independent custody and exposure clearance."
+}

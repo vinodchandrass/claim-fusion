@@ -1,0 +1,203 @@
+{
+  "status": "DEVELOPMENT_ONLY_NOT_INDEPENDENT_VALIDATION",
+  "source_sha256": "b6724c628aebf5b112fe3c8ca74fb59eddfad1b0e1f899eaf9b300190a8dc41d",
+  "model_config_sha256": "886d4e55842691160d3fe6458fb4be9d170f4e190908361ccfcd0994e54cf1be",
+  "model_path": "D:\\DataLineage\\CPU_Domain_Adaptation_Output\\checkpoint_weighted",
+  "candidate_sentences": 4500,
+  "claims": 300,
+  "gold_claims": 188,
+  "settings": {
+    "candidates": "D:\\DataLineage\\S46_S48_Dev_NonOracle_Output\\s46_sentence_candidates.csv",
+    "gold": "D:\\DataLineage\\CrossDomain_Fusion_Output\\scifact_dev_gold.csv",
+    "model": "D:\\DataLineage\\CPU_Domain_Adaptation_Output\\checkpoint_weighted",
+    "out": "D:\\DataLineage\\CrossDomain_Fusion_Output",
+    "batch_size": 8,
+    "threads": 4,
+    "max_length": 192,
+    "bootstrap": 2000,
+    "cache_only": false,
+    "reuse_cache": true
+  },
+  "inference_seconds": 0.04,
+  "test_accessed": false,
+  "policies": {
+    "frozen__top_document": {
+      "n": 188,
+      "accuracy": 0.6648936170212766,
+      "macro_f1": 0.6646564172258558,
+      "confusion": {
+        "SUPPORTS": {
+          "SUPPORTS": 65,
+          "REFUTES": 59
+        },
+        "REFUTES": {
+          "SUPPORTS": 4,
+          "REFUTES": 60
+        }
+      }
+    },
+    "frozen__five_doc_mean": {
+      "n": 188,
+      "accuracy": 0.5372340425531915,
+      "macro_f1": 0.5274880832009244,
+      "confusion": {
+        "SUPPORTS": {
+          "SUPPORTS": 37,
+          "REFUTES": 87
+        },
+        "REFUTES": {
+          "SUPPORTS": 0,
+          "REFUTES": 64
+        }
+      }
+    },
+    "frozen__rank_discounted": {
+      "n": 188,
+      "accuracy": 0.5319148936170213,
+      "macro_f1": 0.522787585092881,
+      "confusion": {
+        "SUPPORTS": {
+          "SUPPORTS": 37,
+          "REFUTES": 87
+        },
+        "REFUTES": {
+          "SUPPORTS": 1,
+          "REFUTES": 63
+        }
+      }
+    },
+    "frozen__majority": {
+      "n": 188,
+      "accuracy": 0.44680851063829785,
+      "macro_f1": 0.417748659916617,
+      "confusion": {
+        "SUPPORTS": {
+          "SUPPORTS": 21,
+          "REFUTES": 103
+        },
+        "REFUTES": {
+          "SUPPORTS": 1,
+          "REFUTES": 63
+        }
+      }
+    },
+    "adapted__top_document": {
+      "n": 188,
+      "accuracy": 0.7925531914893617,
+      "macro_f1": 0.7643883158199172,
+      "confusion": {
+        "SUPPORTS": {
+          "SUPPORTS": 107,
+          "REFUTES": 17
+        },
+        "REFUTES": {
+          "SUPPORTS": 22,
+          "REFUTES": 42
+        }
+      }
+    },
+    "adapted__five_doc_mean": {
+      "n": 188,
+      "accuracy": 0.7393617021276596,
+      "macro_f1": 0.7149664284167209,
+      "confusion": {
+        "SUPPORTS": {
+          "SUPPORTS": 97,
+          "REFUTES": 27
+        },
+        "REFUTES": {
+          "SUPPORTS": 22,
+          "REFUTES": 42
+        }
+      }
+    },
+    "adapted__rank_discounted": {
+      "n": 188,
+      "accuracy": 0.7393617021276596,
+      "macro_f1": 0.7149664284167209,
+      "confusion": {
+        "SUPPORTS": {
+          "SUPPORTS": 97,
+          "REFUTES": 27
+        },
+        "REFUTES": {
+          "SUPPORTS": 22,
+          "REFUTES": 42
+        }
+      }
+    },
+    "adapted__majority": {
+      "n": 188,
+      "accuracy": 0.6914893617021277,
+      "macro_f1": 0.6538412698412699,
+      "confusion": {
+        "SUPPORTS": {
+          "SUPPORTS": 96,
+          "REFUTES": 28
+        },
+        "REFUTES": {
+          "SUPPORTS": 30,
+          "REFUTES": 34
+        }
+      }
+    }
+  },
+  "paired_bootstrap": {
+    "adapted__top_document minus frozen__top_document": {
+      "accuracy_delta": 0.12765957446808507,
+      "ci95": [
+        0.0478723404255319,
+        0.20744680851063835
+      ]
+    },
+    "adapted__five_doc_mean minus frozen__five_doc_mean": {
+      "accuracy_delta": 0.2021276595744681,
+      "ci95": [
+        0.11702127659574468,
+        0.2925531914893617
+      ]
+    },
+    "adapted__rank_discounted minus frozen__rank_discounted": {
+      "accuracy_delta": 0.20744680851063835,
+      "ci95": [
+        0.11170212765957455,
+        0.2925531914893617
+      ]
+    },
+    "adapted__majority minus frozen__majority": {
+      "accuracy_delta": 0.24468085106382986,
+      "ci95": [
+        0.13829787234042556,
+        0.3457446808510638
+      ]
+    },
+    "adapted__five_doc_mean minus adapted__top_document": {
+      "accuracy_delta": -0.05319148936170204,
+      "ci95": [
+        -0.1063829787234043,
+        0.0
+      ]
+    },
+    "adapted__rank_discounted minus adapted__top_document": {
+      "accuracy_delta": -0.05319148936170204,
+      "ci95": [
+        -0.1063829787234043,
+        0.0
+      ]
+    },
+    "adapted__majority minus adapted__top_document": {
+      "accuracy_delta": -0.10106382978723394,
+      "ci95": [
+        -0.17021276595744683,
+        -0.03191489361702127
+      ]
+    }
+  },
+  "limitations": [
+    "SciFact dev only; no test access",
+    "Frozen baseline originally selected on SciFact development",
+    "Retrieval fixed; NLI checkpoint trained on HEALTHVER train",
+    "Document-level aggregation assumes doc IDs, not independent sources",
+    "No calibrated abstention threshold or novel fusion rule tested"
+  ]
+}

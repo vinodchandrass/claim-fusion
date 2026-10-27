@@ -1,0 +1,30 @@
+{
+  "input_sha256": "1c504188ef1f4d95eae55175d6c9168294aad8c2d7e7089e466a3a39050f76f6",
+  "rows": 4500,
+  "conditions": {
+    "frozen_L192": {
+      "status": "complete",
+      "sha256": "0d8e5ab8a21df189182886bd0fb9cb4d973d48cbfe0b236d015983210fbd1286"
+    },
+    "frozen_L512": {
+      "status": "complete",
+      "sha256": "a90ec331cbe13686c1921116439f94394a1ba87c25e3202ffd8a08c42412934e"
+    },
+    "weighted_L192": {
+      "status": "complete",
+      "sha256": "a089573633800ac5f65b7d8fb5a1e94001af7dcd28017842c3d9a01feee846c7"
+    },
+    "weighted_L512": {
+      "status": "complete",
+      "sha256": "66c83a134cd39116a03a61046d4d12b66e2eaa869d49689b2ee250009e25409e"
+    },
+    "unweighted_L192": {
+      "status": "complete",
+      "sha256": "4a11b5bbe34d39859fd87be0894716ffc0ed338b6d9fbbf39a7207a01e52cd74"
+    },
+    "unweighted_L512": {
+      "status": "complete",
+      "sha256": "f12c8c5c8a666570ba30d68651d152097477f7e4b19cea2baa3f98289b76c2c7"
+    }
+  }
+}
