@@ -1,0 +1,15 @@
+{
+  "policy_name": "top_doc_mean",
+  "policy_source": "S49-S52 development-selected exploratory candidate",
+  "frozen_from_prediction_sha256": "75583d0070c18178a8e6464c683903bf54f76d1380b4da05025bef9914019b95",
+  "candidate_set": "15 lexically selected sentences from BM25 top 5 documents, 3 sentences each",
+  "nli": "frozen DeBERTa model; contradiction/entailment scoring",
+  "decision": "mean NLI scores over 3 selected sentences in BM25 rank-1 document; select larger contradiction/entailment score",
+  "class_mapping": {
+    "entailment": "SUPPORTS",
+    "contradiction": "REFUTES"
+  },
+  "not_a_three_class_policy": true,
+  "selection_bias": "Chosen after inspecting development results; all development comparisons are exploratory",
+  "test_custody": "No sealed test evaluation authorized"
+}
